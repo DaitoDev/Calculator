@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css  -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <!-- Calculator Container  -->
+    <div class="calc-container">
+
+        <!-- Display  -->
+        <div class="display">
+            <h1>0</h1>
+        </div>
+
+        <!-- Container for the buttons  -->
+        <div class="btn-container">
+
+            <div class="btn-row first-row">
+                <button class="btns extras clear-all">CE</button>
+                <button class="btns extras">/</button> <!-- this dont work  -->
+                <button class="btns extras">%</button> <!-- this dont work either (Intentionally) -->
+                <button value="/" class="btns operator">÷</button>
+            </div>
+
+            <div class="btn-row second-row">
+                <button value="7" class="btns num">7</button>
+                <button value="8" class="btns num">8</button>
+                <button value="9" class="btns num">9</button>
+                <button value="*" class="btns operator">×</button>
+            </div>
+
+            <div class="btn-row third-row">
+                <button value="4" class="btns num">4</button>
+                <button value="5" class="btns num">5</button>
+                <button value="6" class="btns num">6</button>
+                <button value="-" class="btns operator">-</button>
+            </div>
+
+            <div class="btn-row fourth-row">
+                <button value="1" class="btns num">1</button>
+                <button value="2" class="btns num">2</button>
+                <button value="3" class="btns num">3</button>
+                <button value="+" class="btns operator">+</button>
+            </div>
+
+            <div class="btn-row fifth-row">
+                <button class="btns decimal">.</button>
+                <button value="0" class="btns num">0</button>
+                <button class="btns clear-btn">Del</button>
+                <button value="=" class="btns equal-btn">=</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- script tags  -->
+    <script src="app.js"></script>
+</body>
+
+</html>

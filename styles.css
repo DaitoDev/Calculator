@@ -1,0 +1,237 @@
+/* custom variables  */
+:root {
+    /* colors  */
+    --clr-txt-btn: #ececec;
+    --clr-num-btn: #262626;
+    --clr-opr-btn: #FF862F;
+    --clr-extras-btn: #797878;
+    --clr-clear-btn:#b13737;
+    --clr-equal-btn:#37b14b;
+    --clr-calc: #222222;
+    --clr-display: #1B1B1B;
+    --clr-txt-display:whitesmoke;
+
+    /* Shadows  */
+    --bs-btn: 1px 1px 3px 1px #000;
+
+    /* border radius  */
+    --br-btn: 1rem;
+    --br-lg: 2rem;
+
+    /* button size  */
+    --btn-lg: 5rem;
+    --btn-md: 4.5rem;
+    --btn-sm: 4rem;
+
+    --btn-txt-lg: 1.7rem;
+    --btn-txt-md: 1.4rem;
+    --btn-txt-sm: 1.2rem;
+
+    /* display size  */
+    --display-lg: 17rem;
+    --display-md: 15rem;
+    --display-sm: 14.5rem;
+}
+/* =================     LIGHT MODE ========================  */
+/* custom variables  */
+/* :root {
+
+    --clr-txt-btn: #000000;
+    --clr-num-btn: #F5F5F5;
+    --clr-opr-btn: #75CDFF ;
+    --clr-extras-btn: #6D6C6B;
+    --clr-calc: #F5F5F5;
+    --clr-display: #ffffff;
+    --clr-txt-display:rgb(48, 48, 48);
+
+
+    --bs-btn: 1px 1px 3px 1px #00000038;
+} */
+/* =================  END LIGHT MODE ========================  */
+
+
+/* Setting default styles to a, li tags and font style  */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: rgb(241, 228, 228);
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =================  SCROLL BAR ========================  */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--clr-extras-btn);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #b35e22;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-opr-btn);
+  }
+/* ================= END SCROLL BAR ========================  */
+
+/* Calculator container  */
+.calc-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    max-width: 600px;
+    min-width: 320px;
+    border-radius: var(--br-lg);
+    overflow: hidden;
+
+    background-color: var(--clr-display);
+}
+
+/* Display  */
+.display{
+    min-height: var(--display-lg);
+    text-align: center;
+    min-width: 100%;
+    max-width: 387px;
+    color: var(--clr-txt-display);
+    padding: 0.5rem;
+    font-size: var(--btn-txt-md);
+    overflow-y: auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.display h1{
+    max-width: 100%;
+    overflow-wrap: break-word;
+    max-height: 271px;
+
+}
+
+/* Buttons container  */
+.btn-container {
+    background-color: var(--clr-calc);
+    padding: 1rem 0.5rem;
+    min-width: 100%;
+    border-top-right-radius: var(--br-lg);
+    border-top-left-radius: var(--br-lg);
+    text-align: center;
+}
+
+/* Buttons  */
+.btns{
+    height: var(--btn-lg);
+    width: var(--btn-lg);
+    border: none;
+    margin: 0.3rem;
+    border-radius: var(--br-btn);
+    box-shadow: var(--bs-btn);
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--clr-txt-btn);
+    background-color: var(--clr-num-btn);
+    font-size: var(--btn-txt-lg);
+}
+
+/* Extras buttons  */
+.extras{
+    color: var(--clr-opr-btn);
+    background-color: var(--clr-extras-btn);
+}
+
+/* operators buttons  */
+.operator{
+    background-color: var(--clr-opr-btn);
+}
+
+/* Clear button  */
+.clear-btn{
+    background-color: var(--clr-clear-btn);
+}
+
+/* Enter/Equal button  */
+.equal-btn{
+    background-color: var(--clr-equal-btn);
+}
+
+/* All buttons on hover  */
+.btns:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* All buttons on active  */
+.btns:active {
+    opacity: 0.5;
+}
+
+
+
+/* Mobile phone screens  */
+@media screen and (max-width:450px){
+
+    /* Display  */
+    .display{
+    min-height: var(--display-md);
+    max-width: 370px;
+    min-width: 100%;
+    color: var(--clr-txt-display);
+    font-size: var(--btn-txt-md);
+}
+
+    .btns{
+        height: var(--btn-md);
+        width: var(--btn-md);
+        font-size: var(--btn-txt-md);
+
+    }
+}
+
+
+/* Mobile phone screens smaller  */
+@media screen and (max-width:375px){
+
+    .btn-container {
+        padding: 1rem 0.2rem;
+    }
+
+    .display{
+        min-height: var(--display-sm);
+        min-width: 100%;
+        max-width: 340px;
+        color: var(--clr-txt-display);
+        font-size: var(--btn-txt-sm);
+    }
+
+    .btns{
+        height: var(--btn-sm);
+        width: var(--btn-sm);
+        font-size: var(--btn-txt-sm);
+        margin: 0.1;
+
+    }
+}
